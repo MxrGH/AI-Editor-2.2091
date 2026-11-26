@@ -12,6 +12,10 @@ Describe a Geometry Dash level in plain words and watch it get built for you. Ed
 
 > EditorAI is distributed here rather than on the Geode index, whose guidelines don't allow AI-placed objects.
 
+## Android / touch-friendly interface
+
+This fork targets Geometry Dash **2.2091 on Android**. The mobile overlay uses a full-screen layout, a larger **OPEN AI** floating button, larger touch controls, and increased text size to make the editor easier to use on phones and tablets. Desktop behavior remains unchanged.
+
 ## Open the panel
 
 Press **E** anywhere in the game (desktop), or tap the floating **AI** bubble (mobile). Everything lives in that panel: starting generations, watching them run, chatting with the AI, and every setting.
