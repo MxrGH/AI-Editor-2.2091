@@ -2043,7 +2043,7 @@ void drawOverlay() {
         if (ImGui::Begin("##eaibubble", nullptr,
                 ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_AlwaysAutoResize |
                 ImGuiWindowFlags_NoCollapse)) {
-            if (ImGui::Button("AI", ImVec2(44, 44)))
+            if (ImGui::Button("OPEN AI", ImVec2(76, 64)))
                 g_st.panelOpen = !g_st.panelOpen;
         }
         ImGui::End();
@@ -2415,6 +2415,12 @@ static void editoraiOverlaySetup() {
         style.PopupBorderSize   = 0.f;
         style.FrameBorderSize   = 0.f;
         style.TabBarBorderSize  = 0.f;
+#ifdef GEODE_IS_MOBILE
+        // Touch-first sizing: make every control easier to hit on phones and tablets.
+        style.ScaleAllSizes(1.35f);
+        style.TouchExtraPadding = ImVec2(7.f, 7.f);
+        ImGui::GetIO().FontGlobalScale = 1.15f;
+#endif
         // Colors come from applyThemeFrame() every frame (user-tunable).
     }).draw([] {
         drawOverlay();
